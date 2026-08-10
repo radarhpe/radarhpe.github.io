@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DualRadarHPE is a multi-sensor dataset for 3D human pose estimation using imaging radar.">
+  <meta name="keywords" content="DualRadarHPE, Imaging Radar, Human Pose Estimation, Dataset">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DualRadarHPE: A Multi-Sensor Dataset for 3D Human Pose Estimation Using Imaging Radar</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg?v=2">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="#top">
+        <span class="icon">
+          <i class="fas fa-home"></i>
+        </span>
+      </a>
+      <a class="navbar-item" href="#abstract">Abstract</a>
+      <a class="navbar-item" href="#dataset">Dataset</a>
+      <a class="navbar-item" href="#results">Results</a>
+      <a class="navbar-item" href="#BibTeX">BibTeX</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">A Multi-Sensor Dataset for 3D Human Pose Estimation Using Imaging Radar</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Trung Nguyen,</span>
+            <span class="author-block">Prashant Kumar Rai,</span>
+            <span class="author-block">Nikolay Serbenyuk,</span>
+            <span class="author-block">Reza Ghabcheloo,</span>
+            <span class="author-block">Nataliya Strokina</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Tampere University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://doi.org/10.1109/OJSP.2026.3711537"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#BibTeX"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-cv"></i>
+                  </span>
+                  <span>BibTeX</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="./static/videos/hpeoutdoor.mp4"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-video"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls playsinline preload="metadata" poster="./static/images/sensorbox_overview.png" height="100%">
+        <source src="./static/videos/hpeoutdoor.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        DualRadarHPE provides indoor and outdoor multi-sensor radar captures for 3D human pose estimation.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            This work focuses on 3D Human Pose Estimation (HPE) using imaging radar. We introduce
+            DualRadarHPE, a new multi-sensor dataset containing calibrated and temporally aligned data
+            from two widely adopted radar sensors - Texas Instruments (TI) and Bosch. The dataset
+            includes three radar data representations from TI: raw ADC data, heatmap, and point-cloud;
+            and point clouds from Bosch. The data was captured in both indoor and outdoor scenarios.
+            These scenarios were designed to reflect challenges of real-world applications, such as
+            presence of large metallic objects that can increase radar sensor noise, sensor motion, and
+            multiple people in the scene.
+          </p>
+          <p>
+            We overview state-of-the-art open-access datasets and benchmarks for radar-based 3D HPE
+            and evaluate two popular point-cloud-based methods and the most recent heatmap-based
+            method. We introduce necessary algorithmic adaptations to improve their performance.
+            Finally, we propose a new RadarViT method that is more light-weight and outperforms the
+            existing methods with respect to the mean per joint position error. We tested this model
+            in outdoor conditions with and without re-training, in the presence of multiple persons,
+            and under dynamic conditions. The dataset and the code will be made publicly available.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" id="dataset">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Dataset Overview</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <table class="table is-fullwidth is-striped dataset-table">
+            <tbody>
+              <tr>
+                <th>Sequences</th>
+                <td>40</td>
+              </tr>
+              <tr>
+                <th>Individuals</th>
+                <td>5</td>
+              </tr>
+              <tr>
+                <th>Actor configuration</th>
+                <td>29 single-person sequences, 11 two-person sequences</td>
+              </tr>
+              <tr>
+                <th>Environment</th>
+                <td>33 indoor sequences, 7 outdoor sequences</td>
+              </tr>
+              <tr>
+                <th>Static sensor</th>
+                <td>35 sequences</td>
+              </tr>
+              <tr>
+                <th>Sensor in motion</th>
+                <td>5 sequences, trajectories of the motion</td>
+              </tr>
+              <tr>
+                <th>TI radar</th>
+                <td>Raw ADC, 4D heatmaps, and point-cloud; 52,475 frames in total</td>
+              </tr>
+              <tr>
+                <th>Bosch radar</th>
+                <td>Point clouds in ROS2 bag format</td>
+              </tr>
+              <tr>
+                <th>Camera</th>
+                <td>ZED 2i stereo image pairs, 1024 × 576, in ROS2 bag format</td>
+              </tr>
+              <tr>
+                <th>Motion-capture</th>
+                <td>OptiTrack actor joint positions in CSV format</td>
+              </tr>
+              <tr>
+                <th>LiDAR</th>
+                <td>Ouster OS0 point clouds in ROS2 bag format</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <img src="./static/images/sensorbox_overview.png" alt="Sensor box overview and indoor environment.">
+          <p>
+            Experimental setup showing the indoor environment, motion-capture space, and the multi-sensor
+            rig with TI radar, Bosch radar, LiDAR, and stereo camera.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="./static/images/data_viz.png" alt="DualRadarHPE multi-modal data visualization.">
+          <p>
+            Example synchronized data from the dataset, including RGB view, heatmap, TI point cloud,
+            Bosch point cloud, and 3D ground truth.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" id="results">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Qualitative Results</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <img src="./static/images/indoor_results.jpg" alt="Indoor pose estimation qualitative results.">
+          <p>
+            Indoor qualitative results from the paper with RGB observations and predicted versus ground-truth skeletons.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="./static/images/outdoor_results.jpg" alt="Outdoor pose estimation qualitative results.">
+          <p>
+            Outdoor qualitative results from the paper showing performance in more challenging industrial scenes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@ARTICLE{11602699,
+  author={Nguyen, Trung and Rai, Prashant Kumar and Serbenyuk, Nikolay and Ghabcheloo, Reza and Strokina, Nataliya},
+  journal={IEEE Open Journal of Signal Processing},
+  title={A Multi-Sensor Dataset for 3D Human Pose Estimation Using Imaging Radar},
+  year={2026},
+  volume={7},
+  number={},
+  pages={753-765},
+  keywords={Radar;Image sensors;Clouds;Titanium;Modeling;Pose estimation;Joints;Sequences;Sequential analysis;Distance measurement;Imaging radar;human pose estimation;multimodal dataset;sensor array and multichannel processing;deep learning;benchmarking},
+  doi={10.1109/OJSP.2026.3711537}}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://doi.org/10.1109/OJSP.2026.3711537">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project page template</a>.
+          </p>
+          <p>
+            Please retain attribution to the original template when reusing this source.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
